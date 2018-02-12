@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css.css">
+    <title>ReInvent Law</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="modal hidden" id="imprint">
+      <h1 class="page-heading">Site Notice</h1>
+
+      <h2 id="angaben-gemäß--5-tmg">Angaben gemäß § 5 TMG</h2>
+
+      <ul>
+        <li>Reinvent Law GmbH</li>
+        <li>Hanauer Landstraße 175</li>
+        <li>60314 Frankfurt</li>
+      </ul>
+
+      <p>Vertreten durch den Geschäftsführer Daniel von Devivere</p>
+
+      <h2 id="kontakt">Kontakt</h2>
+
+      <ul>
+        <li><a href="mailto:hello@reinvent.law">hello@reinvent.law</a></li>
+        <li><a href="tel:+496983754187">+49 69 83754187</a></li>
+      </ul>
+
+      <h2 id="registereintrag">Registereintrag</h2>
+
+      <ul>
+        <li>Registergericht: Amtsgericht Frankfurt</li>
+        <li>Registernummer: HRB123</li>
+      </ul>
+
+      <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+
+      <p>Verantwortlich für den redaktionellen Inhalt der Seiten ist der Geschäftsführer der reInvent GmbH, Daniel Devivere.</p>
+
+      <button type="button" name="closeButton" class="btn" onclick="toggleImprint()">Close</button>
+
+    </div>
+
+    <div class="container">
+
+      <div class="left">
+        <img src="hero.svg" alt="">
+      </div>
+
+      <div class="right">
+        <img src="logo.svg" alt="Logo">
+        <footer>
+          <a href="mailto:hello@reinvent.law">hello@reinvent.law</a><br/>
+          <a href="#" onclick="toggleImprint()">Imprint</a>
+        </footer>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+      function toggleImprint() {
+        document.getElementById('imprint').classList.toggle('hidden')
+      }
+    </script>
+
+  </body>
+
+</html>
