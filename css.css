@@ -32,7 +32,6 @@ a {
   justify-content: flex-end;
   flex-direction: column;
   margin: 5vh;
-  text-align: right;
 }
 
 .right img {
@@ -41,18 +40,16 @@ a {
 }
 
 .modal {
-  z-index: 100;
+  z-index: 2;
   background-color: white;
   width: calc(50vw - 60px);
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
   border-radius: 5px;
   position: absolute;
   top: 50px;
-  /* left: 50%;
-  transform: translateX(-50%); */
   color: rgb(38, 38, 38);
   padding: 30px;
-  overflow: scroll;
+  overflow: auto;
   transition: all 0.5s ease-in-out;
   margin-left: 25vw;
   margin-right: 25vw;
@@ -72,15 +69,49 @@ a {
   padding-left: 0;
 }
 
-.btn {
-  border: 0px;
-  background-color: #f3371c;
-  padding: 10px;
-  border-radius: 3px;
-  color: white;
-  width: 100px;
-  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.4);
+.signupLink {
+  margin: 15vh 0 15vh 0;
+  display: block;
 }
+
+footer {
+  margin: 0px;
+  padding: 0px;
+}
+
+footer ul {
+  display: flex;
+  margin: 0px;
+}
+
+footer ul li {
+
+  list-style: none;
+  margin-left: 10px;
+}
+
+.btn {
+  border-radius: 30px;
+  border: 1px solid;
+  padding: 10px 15px;
+  background-color: #f3371c;
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(42, 42, 134);
+  box-shadow: 0px 3px 0px 0px rgb(21, 21, 79);
+  transition: all 0.1s ease-in-out;
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  background-color: rgb(42, 42, 134);
+  transition: all 0.1s ease-in-out;
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
 
 @media only screen and (max-width: 800px) {
     body{
@@ -109,4 +140,16 @@ a {
       height: auto !important;
     }
 
+    .right {
+      width: auto;
+    }
+
+    footer ul {
+      padding: 0px;
+      flex-direction: column;
+    }
+
+    footer ul li {
+      margin-top: 10px;
+    }
 }

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css.css">
     <title>ReInvent Law</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
@@ -41,8 +42,53 @@
 
       <p>Verantwortlich für den redaktionellen Inhalt der Seiten ist der Geschäftsführer der reInvent GmbH, Daniel Devivere.</p>
 
-      <button type="button" name="closeButton" class="btn" onclick="toggleImprint()">Close</button>
+      <button type="button" name="closeButton" class="btn" onclick="toggleModal('imprint')">Close</button>
 
+    </div>
+
+    <div class="modal hidden" id="signup">
+
+      <div id="mc_embed_signup">
+        <form action="https://law.us17.list-manage.com/subscribe/post?u=b34dfd6a04fe711691f933665&amp;id=e62fb8b924" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <h2>Subscribe to our mailing list</h2>
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div class="mc-field-group">
+              <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+              </label>
+              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+            </div>
+            <div class="mc-field-group">
+              <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+              </label>
+              <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+            </div>
+            <div class="mc-field-group">
+              <label for="mce-LNAME">Last Name  <span class="asterisk">*</span>
+              </label>
+              <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
+            </div>
+            <div class="mc-field-group">
+              <label for="mce-COMPANY">Company </label>
+              <input type="text" value="" name="COMPANY" class="" id="mce-COMPANY">
+            </div>
+            <div class="mc-field-group">
+              <label for="mce-POSITION">Job Position </label>
+              <input type="text" value="" name="POSITION" class="" id="mce-POSITION">
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b34dfd6a04fe711691f933665_e62fb8b924" tabindex="-1" value=""></div>
+            <div class="clear">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+              <button type="button" name="button" onclick="toggleModal('signup')" class="button">Close</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 
     <div class="container">
@@ -54,16 +100,19 @@
       <div class="right">
         <img src="logo.svg" alt="Logo">
         <footer>
-          <a href="mailto:hello@reinvent.law">hello@reinvent.law</a><br/>
-          <a href="#" onclick="toggleImprint()">Imprint</a>
+          <ul>
+            <li class="btn"><a href="#" class="" onclick="toggleModal('signup')">Sign up for our Newsletter!</a></li>
+            <li class="btn"><a href="mailto:hello@reinvent.law">hello@reinvent.law</a><br/></li>
+            <li class="btn"><a href="#" onclick="toggleModal('imprint')">Imprint</a><br></li>
+          </ul>
         </footer>
       </div>
 
     </div>
 
     <script type="text/javascript">
-      function toggleImprint() {
-        document.getElementById('imprint').classList.toggle('hidden')
+      function toggleModal(el) {
+        document.getElementById(el).classList.toggle('hidden')
       }
     </script>
 
