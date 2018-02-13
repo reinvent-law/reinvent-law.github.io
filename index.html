@@ -114,6 +114,14 @@
       function toggleModal(el) {
         document.getElementById(el).classList.toggle('hidden')
       }
+      document.addEventListener('keydown', (event) => {
+        console.log(event);
+        if (event.key == 'Escape') {
+          document.getElementById('imprint').classList.add('hidden')
+          document.getElementById('signup').classList.add('hidden')
+
+        }
+      })
     </script>
 
   </body>
